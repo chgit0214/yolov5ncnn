@@ -1,0 +1,194 @@
+7767517
+192 216
+Input                    images                   0 1 images
+YoloV5Focus              focus                    1 1 images 411
+Convolution              Conv_41                  1 1 411 412 0=32 1=3 4=1 5=1 6=3456
+HardSwish                Div_50                   1 1 412 421 0=1.666667e-01
+Convolution              Conv_51                  1 1 421 422 0=64 1=3 3=2 4=1 5=1 6=18432
+HardSwish                Div_60                   1 1 422 431 0=1.666667e-01
+Split                    splitncnn_0              1 2 431 431_splitncnn_0 431_splitncnn_1
+Convolution              Conv_61                  1 1 431_splitncnn_1 432 0=32 1=1 5=1 6=2048
+HardSwish                Div_70                   1 1 432 441 0=1.666667e-01
+Split                    splitncnn_1              1 2 441 441_splitncnn_0 441_splitncnn_1
+Convolution              Conv_71                  1 1 441_splitncnn_1 442 0=32 1=1 5=1 6=1024
+HardSwish                Div_80                   1 1 442 451 0=1.666667e-01
+Convolution              Conv_81                  1 1 451 452 0=32 1=3 4=1 5=1 6=9216
+HardSwish                Div_90                   1 1 452 461 0=1.666667e-01
+BinaryOp                 Add_91                   2 1 441_splitncnn_0 461 462
+Convolution              Conv_92                  1 1 462 463 0=32 1=1 6=1024
+Convolution              Conv_93                  1 1 431_splitncnn_0 464 0=32 1=1 6=2048
+Concat                   Concat_94                2 1 463 464 465
+BatchNorm                BatchNormalization_95    1 1 465 466 0=64
+ReLU                     LeakyRelu_96             1 1 466 467 0=1.000000e-01
+Convolution              Conv_97                  1 1 467 468 0=64 1=1 5=1 6=4096
+HardSwish                Div_106                  1 1 468 477 0=1.666667e-01
+Convolution              Conv_107                 1 1 477 478 0=128 1=3 3=2 4=1 5=1 6=73728
+HardSwish                Div_116                  1 1 478 487 0=1.666667e-01
+Split                    splitncnn_2              1 2 487 487_splitncnn_0 487_splitncnn_1
+Convolution              Conv_117                 1 1 487_splitncnn_1 488 0=64 1=1 5=1 6=8192
+HardSwish                Div_126                  1 1 488 497 0=1.666667e-01
+Split                    splitncnn_3              1 2 497 497_splitncnn_0 497_splitncnn_1
+Convolution              Conv_127                 1 1 497_splitncnn_1 498 0=64 1=1 5=1 6=4096
+HardSwish                Div_136                  1 1 498 507 0=1.666667e-01
+Convolution              Conv_137                 1 1 507 508 0=64 1=3 4=1 5=1 6=36864
+HardSwish                Div_146                  1 1 508 517 0=1.666667e-01
+BinaryOp                 Add_147                  2 1 497_splitncnn_0 517 518
+Split                    splitncnn_4              1 2 518 518_splitncnn_0 518_splitncnn_1
+Convolution              Conv_148                 1 1 518_splitncnn_1 519 0=64 1=1 5=1 6=4096
+HardSwish                Div_157                  1 1 519 528 0=1.666667e-01
+Convolution              Conv_158                 1 1 528 529 0=64 1=3 4=1 5=1 6=36864
+HardSwish                Div_167                  1 1 529 538 0=1.666667e-01
+BinaryOp                 Add_168                  2 1 518_splitncnn_0 538 539
+Split                    splitncnn_5              1 2 539 539_splitncnn_0 539_splitncnn_1
+Convolution              Conv_169                 1 1 539_splitncnn_1 540 0=64 1=1 5=1 6=4096
+HardSwish                Div_178                  1 1 540 549 0=1.666667e-01
+Convolution              Conv_179                 1 1 549 550 0=64 1=3 4=1 5=1 6=36864
+HardSwish                Div_188                  1 1 550 559 0=1.666667e-01
+BinaryOp                 Add_189                  2 1 539_splitncnn_0 559 560
+Convolution              Conv_190                 1 1 560 561 0=64 1=1 6=4096
+Convolution              Conv_191                 1 1 487_splitncnn_0 562 0=64 1=1 6=8192
+Concat                   Concat_192               2 1 561 562 563
+BatchNorm                BatchNormalization_193   1 1 563 564 0=128
+ReLU                     LeakyRelu_194            1 1 564 565 0=1.000000e-01
+Convolution              Conv_195                 1 1 565 566 0=128 1=1 5=1 6=16384
+HardSwish                Div_204                  1 1 566 575 0=1.666667e-01
+Split                    splitncnn_6              1 2 575 575_splitncnn_0 575_splitncnn_1
+Convolution              Conv_205                 1 1 575_splitncnn_1 576 0=256 1=3 3=2 4=1 5=1 6=294912
+HardSwish                Div_214                  1 1 576 585 0=1.666667e-01
+Split                    splitncnn_7              1 2 585 585_splitncnn_0 585_splitncnn_1
+Convolution              Conv_215                 1 1 585_splitncnn_1 586 0=128 1=1 5=1 6=32768
+HardSwish                Div_224                  1 1 586 595 0=1.666667e-01
+Split                    splitncnn_8              1 2 595 595_splitncnn_0 595_splitncnn_1
+Convolution              Conv_225                 1 1 595_splitncnn_1 596 0=128 1=1 5=1 6=16384
+HardSwish                Div_234                  1 1 596 605 0=1.666667e-01
+Convolution              Conv_235                 1 1 605 606 0=128 1=3 4=1 5=1 6=147456
+HardSwish                Div_244                  1 1 606 615 0=1.666667e-01
+BinaryOp                 Add_245                  2 1 595_splitncnn_0 615 616
+Split                    splitncnn_9              1 2 616 616_splitncnn_0 616_splitncnn_1
+Convolution              Conv_246                 1 1 616_splitncnn_1 617 0=128 1=1 5=1 6=16384
+HardSwish                Div_255                  1 1 617 626 0=1.666667e-01
+Convolution              Conv_256                 1 1 626 627 0=128 1=3 4=1 5=1 6=147456
+HardSwish                Div_265                  1 1 627 636 0=1.666667e-01
+BinaryOp                 Add_266                  2 1 616_splitncnn_0 636 637
+Split                    splitncnn_10             1 2 637 637_splitncnn_0 637_splitncnn_1
+Convolution              Conv_267                 1 1 637_splitncnn_1 638 0=128 1=1 5=1 6=16384
+HardSwish                Div_276                  1 1 638 647 0=1.666667e-01
+Convolution              Conv_277                 1 1 647 648 0=128 1=3 4=1 5=1 6=147456
+HardSwish                Div_286                  1 1 648 657 0=1.666667e-01
+BinaryOp                 Add_287                  2 1 637_splitncnn_0 657 658
+Convolution              Conv_288                 1 1 658 659 0=128 1=1 6=16384
+Convolution              Conv_289                 1 1 585_splitncnn_0 660 0=128 1=1 6=32768
+Concat                   Concat_290               2 1 659 660 661
+BatchNorm                BatchNormalization_291   1 1 661 662 0=256
+ReLU                     LeakyRelu_292            1 1 662 663 0=1.000000e-01
+Convolution              Conv_293                 1 1 663 664 0=256 1=1 5=1 6=65536
+HardSwish                Div_302                  1 1 664 673 0=1.666667e-01
+Split                    splitncnn_11             1 2 673 673_splitncnn_0 673_splitncnn_1
+Convolution              Conv_303                 1 1 673_splitncnn_1 674 0=512 1=3 3=2 4=1 5=1 6=1179648
+HardSwish                Div_312                  1 1 674 683 0=1.666667e-01
+Convolution              Conv_313                 1 1 683 684 0=256 1=1 5=1 6=131072
+HardSwish                Div_322                  1 1 684 693 0=1.666667e-01
+Split                    splitncnn_12             1 4 693 693_splitncnn_0 693_splitncnn_1 693_splitncnn_2 693_splitncnn_3
+Pooling                  MaxPool_323              1 1 693_splitncnn_3 694 1=5 3=2 5=1
+Pooling                  MaxPool_324              1 1 693_splitncnn_2 695 1=9 3=4 5=1
+Pooling                  MaxPool_325              1 1 693_splitncnn_1 696 1=13 3=6 5=1
+Concat                   Concat_326               4 1 693_splitncnn_0 694 695 696 697
+Convolution              Conv_327                 1 1 697 698 0=512 1=1 5=1 6=524288
+HardSwish                Div_336                  1 1 698 707 0=1.666667e-01
+Split                    splitncnn_13             1 2 707 707_splitncnn_0 707_splitncnn_1
+Convolution              Conv_337                 1 1 707_splitncnn_1 708 0=256 1=1 5=1 6=131072
+HardSwish                Div_346                  1 1 708 717 0=1.666667e-01
+Convolution              Conv_347                 1 1 717 718 0=256 1=1 5=1 6=65536
+HardSwish                Div_356                  1 1 718 727 0=1.666667e-01
+Convolution              Conv_357                 1 1 727 728 0=256 1=3 4=1 5=1 6=589824
+HardSwish                Div_366                  1 1 728 737 0=1.666667e-01
+Convolution              Conv_367                 1 1 737 738 0=256 1=1 6=65536
+Convolution              Conv_368                 1 1 707_splitncnn_0 739 0=256 1=1 6=131072
+Concat                   Concat_369               2 1 738 739 740
+BatchNorm                BatchNormalization_370   1 1 740 741 0=512
+ReLU                     LeakyRelu_371            1 1 741 742 0=1.000000e-01
+Convolution              Conv_372                 1 1 742 743 0=512 1=1 5=1 6=262144
+HardSwish                Div_381                  1 1 743 752 0=1.666667e-01
+Convolution              Conv_382                 1 1 752 753 0=256 1=1 5=1 6=131072
+HardSwish                Div_391                  1 1 753 762 0=1.666667e-01
+Split                    splitncnn_14             1 2 762 762_splitncnn_0 762_splitncnn_1
+Interp                   Resize_393               1 1 762_splitncnn_1 772 0=1 1=2.000000e+00 2=2.000000e+00
+Concat                   Concat_394               2 1 772 673_splitncnn_0 773
+Split                    splitncnn_15             1 2 773 773_splitncnn_0 773_splitncnn_1
+Convolution              Conv_395                 1 1 773_splitncnn_1 774 0=128 1=1 5=1 6=65536
+HardSwish                Div_404                  1 1 774 783 0=1.666667e-01
+Convolution              Conv_405                 1 1 783 784 0=128 1=1 5=1 6=16384
+HardSwish                Div_414                  1 1 784 793 0=1.666667e-01
+Convolution              Conv_415                 1 1 793 794 0=128 1=3 4=1 5=1 6=147456
+HardSwish                Div_424                  1 1 794 803 0=1.666667e-01
+Convolution              Conv_425                 1 1 803 804 0=128 1=1 6=16384
+Convolution              Conv_426                 1 1 773_splitncnn_0 805 0=128 1=1 6=65536
+Concat                   Concat_427               2 1 804 805 806
+BatchNorm                BatchNormalization_428   1 1 806 807 0=256
+ReLU                     LeakyRelu_429            1 1 807 808 0=1.000000e-01
+Convolution              Conv_430                 1 1 808 809 0=256 1=1 5=1 6=65536
+HardSwish                Div_439                  1 1 809 818 0=1.666667e-01
+Convolution              Conv_440                 1 1 818 819 0=128 1=1 5=1 6=32768
+HardSwish                Div_449                  1 1 819 828 0=1.666667e-01
+Split                    splitncnn_16             1 2 828 828_splitncnn_0 828_splitncnn_1
+Interp                   Resize_451               1 1 828_splitncnn_1 838 0=1 1=2.000000e+00 2=2.000000e+00
+Concat                   Concat_452               2 1 838 575_splitncnn_0 839
+Split                    splitncnn_17             1 2 839 839_splitncnn_0 839_splitncnn_1
+Convolution              Conv_453                 1 1 839_splitncnn_1 840 0=64 1=1 5=1 6=16384
+HardSwish                Div_462                  1 1 840 849 0=1.666667e-01
+Convolution              Conv_463                 1 1 849 850 0=64 1=1 5=1 6=4096
+HardSwish                Div_472                  1 1 850 859 0=1.666667e-01
+Convolution              Conv_473                 1 1 859 860 0=64 1=3 4=1 5=1 6=36864
+HardSwish                Div_482                  1 1 860 869 0=1.666667e-01
+Convolution              Conv_483                 1 1 869 870 0=64 1=1 6=4096
+Convolution              Conv_484                 1 1 839_splitncnn_0 871 0=64 1=1 6=16384
+Concat                   Concat_485               2 1 870 871 872
+BatchNorm                BatchNormalization_486   1 1 872 873 0=128
+ReLU                     LeakyRelu_487            1 1 873 874 0=1.000000e-01
+Convolution              Conv_488                 1 1 874 875 0=128 1=1 5=1 6=16384
+HardSwish                Div_497                  1 1 875 884 0=1.666667e-01
+Split                    splitncnn_18             1 2 884 884_splitncnn_0 884_splitncnn_1
+Convolution              Conv_498                 1 1 884_splitncnn_1 885 0=128 1=3 3=2 4=1 5=1 6=147456
+HardSwish                Div_507                  1 1 885 894 0=1.666667e-01
+Concat                   Concat_508               2 1 894 828_splitncnn_0 895
+Split                    splitncnn_19             1 2 895 895_splitncnn_0 895_splitncnn_1
+Convolution              Conv_509                 1 1 895_splitncnn_1 896 0=128 1=1 5=1 6=32768
+HardSwish                Div_518                  1 1 896 905 0=1.666667e-01
+Convolution              Conv_519                 1 1 905 906 0=128 1=1 5=1 6=16384
+HardSwish                Div_528                  1 1 906 915 0=1.666667e-01
+Convolution              Conv_529                 1 1 915 916 0=128 1=3 4=1 5=1 6=147456
+HardSwish                Div_538                  1 1 916 925 0=1.666667e-01
+Convolution              Conv_539                 1 1 925 926 0=128 1=1 6=16384
+Convolution              Conv_540                 1 1 895_splitncnn_0 927 0=128 1=1 6=32768
+Concat                   Concat_541               2 1 926 927 928
+BatchNorm                BatchNormalization_542   1 1 928 929 0=256
+ReLU                     LeakyRelu_543            1 1 929 930 0=1.000000e-01
+Convolution              Conv_544                 1 1 930 931 0=256 1=1 5=1 6=65536
+HardSwish                Div_553                  1 1 931 940 0=1.666667e-01
+Split                    splitncnn_20             1 2 940 940_splitncnn_0 940_splitncnn_1
+Convolution              Conv_554                 1 1 940_splitncnn_1 941 0=256 1=3 3=2 4=1 5=1 6=589824
+HardSwish                Div_563                  1 1 941 950 0=1.666667e-01
+Concat                   Concat_564               2 1 950 762_splitncnn_0 951
+Split                    splitncnn_21             1 2 951 951_splitncnn_0 951_splitncnn_1
+Convolution              Conv_565                 1 1 951_splitncnn_1 952 0=256 1=1 5=1 6=131072
+HardSwish                Div_574                  1 1 952 961 0=1.666667e-01
+Convolution              Conv_575                 1 1 961 962 0=256 1=1 5=1 6=65536
+HardSwish                Div_584                  1 1 962 971 0=1.666667e-01
+Convolution              Conv_585                 1 1 971 972 0=256 1=3 4=1 5=1 6=589824
+HardSwish                Div_594                  1 1 972 981 0=1.666667e-01
+Convolution              Conv_595                 1 1 981 982 0=256 1=1 6=65536
+Convolution              Conv_596                 1 1 951_splitncnn_0 983 0=256 1=1 6=131072
+Concat                   Concat_597               2 1 982 983 984
+BatchNorm                BatchNormalization_598   1 1 984 985 0=512
+ReLU                     LeakyRelu_599            1 1 985 986 0=1.000000e-01
+Convolution              Conv_600                 1 1 986 987 0=512 1=1 5=1 6=262144
+HardSwish                Div_609                  1 1 987 996 0=1.666667e-01
+Convolution              Conv_610                 1 1 884_splitncnn_0 997 0=21 1=1 5=1 6=2688
+Reshape                  Reshape_624              1 1 997 1015 0=-1 1=7 2=3
+Permute                  Transpose_625            1 1 1015 output 0=1
+Convolution              Conv_626                 1 1 940_splitncnn_0 1017 0=21 1=1 5=1 6=5376
+Reshape                  Reshape_640              1 1 1017 1035 0=-1 1=7 2=3
+Permute                  Transpose_641            1 1 1035 1036 0=1
+Convolution              Conv_642                 1 1 996 1037 0=21 1=1 5=1 6=10752
+Reshape                  Reshape_656              1 1 1037 1055 0=-1 1=7 2=3
+Permute                  Transpose_657            1 1 1055 1056 0=1
